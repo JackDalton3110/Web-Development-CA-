@@ -9,7 +9,7 @@ class Board(models.Model):
         return self.name
 
 class Topic(models.Model):
-    sunject = models.CharField(max_length = 255)
+    subject = models.CharField(max_length = 255)
     last_updated = models.DateTimeField(auto_now_add=True)
     board = models.ForeignKey(Board, on_delete=models.CASCADE, related_name='topics')
     starter = models.ForeignKey(User, on_delete=models.CASCADE, related_name='topics')
