@@ -5,6 +5,7 @@ from django.db.models import Count
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from django.utils import timezone
+from django.urls import reverse
 
 from .forms import NewTopicForm, PostForm
 from .models import Board, Post, Topic
