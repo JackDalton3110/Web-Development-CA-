@@ -10,10 +10,7 @@ class Board(models.Model):
     description = models.CharField(max_length=100)
 
     def __str__(self):
-        return self.subject
-
-    def get_last_ten_posts(self):
-        return self.posts.order_by('-created_at')[:10]
+        return self.name
 
     def get_posts_count(self):
         return Post.objects.filter(topic__board=self).count()
